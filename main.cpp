@@ -109,27 +109,27 @@ int main() {
 
     while(1) {
          switch(inp_char){
-            case't':
+            case 't':
             print_t_rh();
             inp_char = 0;
             break;
 
-            case'm':
+            case 'm':
             print_mag();
             inp_char = 0;
             break;
 
-            case'a':
+            case 'a':
             print_accel();
             inp_char = 0;
             break;
 
-            case'g':
+            case 'g':
             print_gyro();
             inp_char = 0;
             break;
 
-            case'd':
+            case 'd':
             print_distance();
             inp_char = 0;
             break;
