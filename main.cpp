@@ -17,7 +17,7 @@ static DigitalOut shutdown_pin(PC_6);
 static VL53L0X range(&devI2c, &shutdown_pin, PC_7, 0x52);
 static UnbufferedSerial pc(USBTX, USBRX);
 
-char char_inp = 0;
+char inp_char = 0;
 
 // functions to print sensor data
 void print_t_rh(){
@@ -105,36 +105,36 @@ int main() {
     print_distance();
     printf("\r\n");
     
-    pc.attach(&pc_intterrupt);   
+    pc.attach(&pc_interrupt);   
 
     while(1) {
          switch(inp_char){
-            case't';
+            case't':
             print_t_rh();
             inp_char = 0;
-            Break;
+            break;
 
-            case'm';
+            case'm':
             print_mag();
             inp_char = 0;
-            Break;
+            break;
 
-            case'a';
+            case'a':
             print_accel();
             inp_char = 0;
-            Break;
+            break;
 
-            case'g';
+            case'g':
             print_gyro();
             inp_char = 0;
-            Break;
+            break;
 
-            case'd';
+            case'd':
             print_distance();
             inp_char = 0;
-            Break;
+            break;
 
-            default;
+            default:
             break;
         }
         wait_us(500000);
