@@ -110,32 +110,32 @@ int main() {
     while(1) {
          switch(inp_char){
             case 't':
-            print_t_rh();
-            inp_char = 0;
-            break;
+                print_t_rh();
+                inp_char = 0;
+                break;
 
             case 'm':
-            print_mag();
-            inp_char = 0;
-            break;
+                print_mag();
+                inp_char = 0;
+                break;
 
             case 'a':
-            print_accel();
-            inp_char = 0;
-            break;
+                print_accel();
+                inp_char = 0;
+                break;
 
             case 'g':
-            print_gyro();
-            inp_char = 0;
-            break;
+                print_gyro();
+                inp_char = 0;
+                break;
 
             case 'd':
-            print_distance();
-            inp_char = 0;
-            break;
+                print_distance();
+                inp_char = 0;
+                break;
 
             default:
-            break;
+                break;
         }
         wait_us(500000);
     }
